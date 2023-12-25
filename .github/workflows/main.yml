@@ -35,4 +35,4 @@ jobs:
       run: |
         ansible-playbook -i Inventory.ini --private-key=/home/runner/.ssh/id_rsa -u ubuntu -b playbook.yml
       env:
-        ANSIBLE_HOST_KEY_CHECKING: "0"
+        ANSIBLE_HOST_KEY_CHECKING: false
