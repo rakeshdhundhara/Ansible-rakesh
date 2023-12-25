@@ -23,6 +23,12 @@ jobs:
       run: |
         pip install ansible
       continue-on-error: true
+    - name: Set up SSH Key
+      run: |
+          mkdir -p /home/runner/.ssh/
+          echo "${{ secrets.SSH_key }}" > /home/runner/.ssh/id_rsa
+          chmod 400 /home/runner/.ssh/id_rsa
+          shell: bash
 
     - name: Run Ansible playbook
       run: |
