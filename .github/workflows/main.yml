@@ -26,6 +26,6 @@ jobs:
 
     - name: Run Ansible playbook
       run: |
-        ansible-playbook -i your_inventory_file install_nginx.yml
+        ansible-playbook -i Inventory.ini playbook.yml
       env:
         ANSIBLE_HOST_KEY_CHECKING: false
