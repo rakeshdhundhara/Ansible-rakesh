@@ -33,6 +33,6 @@ jobs:
 
     - name: Run Ansible playbook
       run: |
-        ansible-playbook -i Inventory.ini --private-key=/home/runner/.ssh/id_rsa -u ubuntu -b Uplaybook.yml
+        ansible-playbook -i Inventory.ini --private-key=/home/runner/.ssh/id_rsa -u ubuntu -b playbook.yml
       env:
         ANSIBLE_HOST_KEY_CHECKING: false
