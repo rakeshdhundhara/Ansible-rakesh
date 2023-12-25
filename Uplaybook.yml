@@ -1,0 +1,10 @@
+- name: Uninstall Nginx
+  hosts: all
+  become: true  # Run tasks with sudo (root) privileges
+
+  tasks:
+    - name: Uninstall Nginx
+      apt:
+        name: nginx
+        state: absent
+
